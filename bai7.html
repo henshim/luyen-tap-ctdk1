@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Cước thuê bao</h3>
+<p>Số ngày trong tháng</p>
+<input type="number" id="ngayTT">Số ngày trong tháng<br>
+<input type="number" id="ngaySD">Số ngày sử sụng<br>
+<button id="cuoc" onclick="tinh()" style="width: 100px">tính</button>
+<script>
+    function tinh() {
+        debugger
+        let ngayTT = +document.getElementById("ngayTT").value;
+        let ngaySD = +document.getElementById("ngaySD").value;
+        let cuoc = (ngaySD * ngayTT) / 49;
+        if(ngaySD>31){
+            alert("vui lòng nhập lại");
+        }else if(ngayTT>31){
+            alert("vui lòng nhập lại");
+        }else {
+            document.write("tiền cước tháng này là: " +cuoc);
+        }
+    }
+</script>
+</body>
+</html>

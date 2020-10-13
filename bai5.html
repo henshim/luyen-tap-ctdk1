@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="bkt">Điểm bài kiểm tra<br>
+<input type="number" id="tgk">Điểm thi giữa kì<br>
+<input type="number" id="tqk">Điểm thi cuối kì<br>
+<button id="ht" onclick="hien()">Hiện xếp loại</button>
+<script>
+    function hien() {
+        debugger
+        let bkt = +document.getElementById('bkt').value;
+        let tgk = +document.getElementById('tgk').value;
+        let tqk = +document.getElementById('tqk').value;
+        let ht = (bkt + tgk + tqk)/3;
+        if (ht < 5 ) {
+            alert('học lực yếu');
+        } else if (ht >= 5 && ht < 8) {
+            alert('học lực trung bình');
+        } else if (ht >= 8) {
+            alert('học lực giỏi');
+        }else {
+            alert("không hiện được");
+        }
+    }
+</script>
+</body>
+</html>
